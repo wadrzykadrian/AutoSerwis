@@ -1,0 +1,318 @@
+:root {
+    font-size: 6px;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*navigation */
+.menu_icon {
+    font-size: 6em;
+    position: absolute;
+    top: 1vh;
+    left: 2vh;
+    color: black;
+    z-index: 1000;
+    position: fixed;
+    text-shadow: 1px 1px white;
+}
+
+.navigation {
+    display: none;
+    text-align: center;
+    font-size: 5em;
+    z-index: 900;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+
+.navigation>ul {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.navigation li:hover {
+    cursor: pointer;
+}
+
+/*main page */
+.main_page {
+    height: 70vh;
+    width: 100vw;
+    background: url('../photo/serwis.jpg') center;
+    background-size: cover;
+    font-size: 4em;
+    text-align: center;
+}
+
+.courtine {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    top: 0;
+}
+
+.main_description {
+    z-index: 200;
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-shadow: 1px 1px black;
+}
+
+/* about us */
+.about_us {
+    min-height: 70vh;
+    text-align: center;
+    padding: 0 5%;
+    background-color: #f05f40;
+    color: white;
+    border-bottom: 1px solid black;
+    border-top:1px solid black;
+}
+
+.about_us_description {
+    min-height: 50vh;
+    font-size: 2em;
+    line-height: 3em;
+}
+
+/* offer page */
+.offer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-top: 1px solid white;
+    background-color: white;
+}
+
+.offer .title::after {
+    border-color: black;
+}
+
+.icon {
+    color: #f05f40;
+    font-size: 4.5em;
+}
+
+.tiles_title {
+    font-size: 2.5em;
+    padding: 10px 0;
+}
+
+.tiles_description {
+    font-size: 2em;
+    padding: 0 2%;
+}
+
+/*  contact page */
+.contact {
+    position: relative;
+    top: 5vh;
+    min-height: 50vh;
+    text-align: center;
+    background-color: #f05f40;
+    border-top: 1px solid black;
+}
+
+.contact .icon {
+    color: white;
+    font-size: 5em;
+}
+
+.contact .title {
+    color: white;
+}
+
+.contact .tiles {
+    min-height: 180px;
+}
+
+.contact_tiles_description {
+    text-decoration: none;
+    font-size: 3em;
+    min-height: 7vh;
+    line-height: 1.5em;
+    color: white;
+}
+
+/* other classes */
+.flex_center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.title::after {
+    content: "";
+    width: 50%;
+    margin: 15px auto 0;
+    border: 1px solid white;
+    display: block;
+}
+
+.title {
+    font-size: 4em;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.tiles {
+    min-height: 200px;
+    width: 90%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* @media */
+
+@media only screen and (min-width:800px) {
+    :root {
+        font-size: 8px;
+    }
+
+    .menu_icon {
+        display: none;
+        pointer-events: none;
+    }
+
+    .navigation {
+        display: block;
+        height: 5vh;
+        line-height: 5vh;
+        color: white;
+        font-size: 2em;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .navigation>ul {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .navigation li {
+        display: inline;
+    }
+
+    .main_page {
+        height: 100vh;
+    }
+
+    .courtine {
+        height: 100vh;
+    }
+
+    .main_description {
+        height: 100vh;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 1.7em;
+    }
+
+    .about_us_description {
+        min-height: 50vh;
+        font-size: 3em;
+        line-height: 2.5em;
+    }
+
+    .title {
+        padding-top: 50px;
+    }
+
+    .tiles {
+        width: 50%;
+        min-height: 220px;
+    }
+
+    .contact {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .contact .tiles {
+        min-height: 220px;
+    }
+}
+
+@media only screen and (min-width:1100px) {
+    :root {
+        font-size: 10px;
+    }
+
+    .offer {
+        min-height: 80vh;
+    }
+
+    .tiles {
+        min-height: 350px;
+    }
+
+    .contact .tiles {
+        min-height: 350px;
+    }
+}
