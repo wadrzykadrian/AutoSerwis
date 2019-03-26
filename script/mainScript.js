@@ -1,13 +1,22 @@
 $(document).ready(function () {
   AOS.init();
 
-  $(".menu_icon").on("click", function () {
-    $(".navigation").toggle(300);
-  });
+  var  menu_icon = document.querySelector(".menu_icon");
+  var show = false;
+  menu_icon.addEventListener("click", function(){
+    if(!show)  
+    {      
+      document.querySelector(".navigation").classList.add("show");
+      show = true;
+    }
+    else
+    {
+      document.querySelector(".navigation").classList.remove("show");
+      show =  false;
+    }
+  })
 
-  $('a').on('click', function () {
-    if (window.innerWidth < 800) {
-      $(".navigation").toggle();
-    };
-  });
+
+
+
 })
