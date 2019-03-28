@@ -1,5 +1,5 @@
 :root {
-    font-size: 8px;
+    font-size: 12px;
     overflow-x: hidden;
 }
 
@@ -16,13 +16,8 @@ body {
 
 /*navigation */
 .menu_icon {
-    font-size: 6em;
-    position: absolute;
-    top: 1vh;
-    left: 2vh;
+    font-size: 2em;
     color: black;
-    z-index: 1000;
-    position: fixed;
     text-shadow: 1px 1px black;
     display: none;
 }
@@ -30,22 +25,14 @@ body {
 .navigation {
     text-align: center;
     font-size: 3em;
-    z-index: 2;
     position: fixed;
-    top: 0;
-    right: 0;
     color: white;
     width: 100vw;
+    min-height: 5vh;
     background-color: #f1512dd7;
     box-shadow: 0px 9px 22px 0px rgba(0, 0, 0, 0.411);
-    height: 7vh;
-}
-
-.navigation>ul {
-    list-style: none;
     display: flex;
     justify-content: space-around;
-    height: 100%;
 }
 
 .navigation li:hover {
@@ -61,40 +48,21 @@ body {
 .company_name {
     text-align: center;
     width: 100%;
-    font-size: 8em;
-    color:white;
+    font-size: 6em;
+    color: white;
     text-shadow: 3px 4px 10px black;
 }
 
-.shield {
-	width: 0;
-	height: 0;
-	border: 50px solid transparent;
-	border-bottom: 20px solid rgba(243, 241, 241, 0.7);
-	position: relative;
-    top: -50px;
-    margin: 0 auto;
-}
-
-.shield::after {
-	content: '';
-	position: absolute;
-	left: -50px; top: 20px;
-	width: 0;
-	height: 0;
-	border: 50px solid transparent;
-    border-top: 70px solid rgba(243, 241, 241, 0.7);
-}
-
 .company_description {
-    width: 70%;
-    margin: 4% auto;
+    width: 100%;
     text-align: center;
     font-size: 3em;
     text-align: center;
-    color:rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.75);
     line-height: 2em;
+    padding: 5% 10%;
 }
+
 /* about us */
 .about_us {
     min-height: 50vh;
@@ -108,11 +76,10 @@ body {
 }
 
 .about_us_description {
-    min-height: 30vh;
-    width: 70%;
+    min-height: 20vh;
+    width: 100%;
     font-size: 2.5em;
     line-height: 3em;
-    margin: 0 auto;
 }
 
 /* offer page */
@@ -197,27 +164,39 @@ a {
     text-decoration: none;
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:1680px) {
+    :root {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width:1440px) {
+    :root {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .main_page {
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width:480px) {
     .navigation {
-        display: none;
-        text-align: right;
-        padding-right: 5%;
+        font-size: 2em;
     }
 
-    .show {
-        display: block;
-    }
+}
 
-    .navigation>ul {
-        flex-direction: column;
-        height: 40vh;
+@media only screen and (max-width:480px) {
+    :root {
+        font-size: 4px;
     }
+}
 
-    .menu_icon {
-        display: block;
-    }
-
-    .navigation li {
-        border-bottom: none
+@media only screen and (max-width:350px) {
+    :root {
+        font-size: 3px;
     }
 }
